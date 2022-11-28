@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Chip : MonoBehaviour
 {
@@ -15,9 +12,7 @@ public class Chip : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        boardController.CheckChip(gameObject.GetComponent<Chip>());
-
-       
+        boardController.CheckChip(gameObject.GetComponent<Chip>()); 
     }
 
     public void SetOpenImage(Sprite sprite)
@@ -38,9 +33,4 @@ public class Chip : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = openImage;
     }
-
-
-
-
-  
 }

@@ -14,8 +14,6 @@ public class BoardController : MonoBehaviour
     private int chipChecked = 0;
 
     private Chip firstCheckcd;
-    private Chip sccondChecked;
-
 
     private void Start()
     {
@@ -58,7 +56,6 @@ public class BoardController : MonoBehaviour
 
         }
     }
-
     private void Update()
     {
         boardChips = new List<Chip>(GetComponentsInChildren<Chip>());
@@ -72,10 +69,6 @@ public class BoardController : MonoBehaviour
 
         }
     }
-
-
-
-
     public List<Chip> InitRandomPairs(List<Chip> inList)
     {
         List<Sprite> openSprites = chipSprites;
@@ -106,15 +99,6 @@ public class BoardController : MonoBehaviour
            
 
         }
-
-        //if (boardChips == null)
-        //{
-        //    boardChips.Remove(null);
-        //}
-
-
-
-
         return shuffleList;
     }
 }

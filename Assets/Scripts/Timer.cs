@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -16,18 +13,11 @@ public class Timer : MonoBehaviour
     public float TimeLeft;
     public float _Score_Minus;
 
-   
-
-
     void Start()
     {
         timerBar = GetComponent<Image>();
-        timeLeft = maTime;
-
-        
+        timeLeft = maTime;     
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (timerRunning == true)
@@ -35,26 +25,15 @@ public class Timer : MonoBehaviour
             timeLeft -= Time.deltaTime;
             timerBar.fillAmount = timeLeft / maTime;
         }
-
         if (boardcontr.boardChips.Count == 0)
         {
             timerRunning = false;
         }
-
-
-
-
-
     }
     public void OnEnable()
-    {
-
-        
+    {  
         Invoke("GameOver", TimeLeft);
-
     }
-
-
     void GameOver() {
 
         if (boardcontr.boardChips.Count != 0)
@@ -65,11 +44,7 @@ public class Timer : MonoBehaviour
         {
 
         }
-
-         
-
     }  
-
 }
 
 

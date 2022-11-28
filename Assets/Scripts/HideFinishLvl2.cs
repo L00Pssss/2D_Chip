@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,9 +5,6 @@ public class HideFinishLvl2 : MonoBehaviour
 {
     public BoardController boardcontr;
     public Score scores;
-    
-
-
     public GameObject PanelU;
     public GameObject TextU;
 
@@ -19,10 +14,6 @@ public class HideFinishLvl2 : MonoBehaviour
     }
     public void Hide()
     {
-        
-
-
-
         if (boardcontr.boardChips.Count == 0)
         {
             PanelU.SetActive(true);
@@ -32,9 +23,4 @@ public class HideFinishLvl2 : MonoBehaviour
             TextU.GetComponent<Text>().text = "Congratulations, but you can do better !";
         }
     }
-
-
-
-
-
 }
